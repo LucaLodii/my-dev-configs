@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Tokyo Night Storm",
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+    //"reportMissingModuleSource": "none"
+    },
+    "workbench.editor.empty.hint": "hidden"
+}
