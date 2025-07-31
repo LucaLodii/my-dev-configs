@@ -1,0 +1,21 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+.vscode-server/
+*.code-workspace
+
+# Neovim cache and local files
+.local/
+log/
+sessions/
+shada/
+undodir/
+lazy-lock.json
+
+# Build artifacts
+/build/
+*.so
+*.dll
