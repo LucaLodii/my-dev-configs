@@ -15,14 +15,34 @@ These configurations are tailored for and tested on the following setup:
 * **Neovim** (`nvim/`): A modern, Lua-based setup focused on web and systems development.
 * **VS Code** (`vscode/`): Core `settings.json` to sync essential editor behavior and appearance.
 
-## Prerequisites
+## Required Software (Prerequisites)
 
-Before using these configurations, make sure you have the following installed:
+This is the list of software you need to install on a new machine to make these configurations work.
 
 1.  **Git:** For cloning the repository.
-2.  **Neovim:** (Latest stable version). On Windows, I recommend using a package manager like Chocolatey: `choco install neovim`.
-3.  **A Nerd Font:** Required for icons and glyphs in Neovim themes and plugins. I use [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads).
-4.  **Node.js & npm:** Essencial para Language Servers, formatadores e linters de JavaScript/TypeScript. Verifique com `node -v` e `npm -v`.
-5.  **Python:** Necessário para Language Servers e formatadores Python. Verifique com `python --version` (ou `py --version`).
-6.  **MSYS2:** Fornece `make` e o toolchain MinGW-w64 (GCC 64-bit), essenciais para compilar plugins nativos do Neovim. Verifique com `gcc -v` no PowerShell (após adicionar ao PATH).
-7.  **CMake:** Sistema de build utilizado por alguns plugins do Neovim (ex: `telescope-fzf-native.nvim`). Verifique com `cmake --version`.
+2.  **Neovim:** The latest stable version.
+3.  **A Nerd Font:** Required for icons and glyphs in themes and plugins. I use [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads).
+4.  **Node.js & npm:** Essential for JavaScript/TypeScript Language Servers, linters, and formatters.
+5.  **Python:** Required for Python-based Language Servers and tools.
+6.  **MSYS2:** Provides the MinGW-w64 toolchain (`make`, `gcc`), which is needed to compile some native Neovim plugins.
+7.  **CMake:** A build system used by some native plugins (e.g., `telescope-fzf-native`).
+
+## Manual Setup Instructions
+
+To activate these configurations, you need to place the files from this repository into their default locations on Windows.
+
+#### Neovim
+
+Copy the entire contents of the `nvim/` folder from this repository to the following path:
+`%LOCALAPPDATA%\nvim`
+
+#### VS Code
+
+Copy the `settings.json` file from the `vscode/` folder in this repository to the following path, overwriting the existing one:
+`%APPDATA%\Code\User\settings.json`
+
+## Post-Setup
+
+### Neovim
+
+The first time you launch Neovim after copying the files, it will automatically install all plugins via `lazy.nvim`. If you need to sync or update them later, use the `:Lazy sync` command inside Neovim.
