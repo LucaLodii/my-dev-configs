@@ -26,23 +26,3 @@ This is the list of software you need to install on a new machine to make these 
 5.  **Python:** Required for Python-based Language Servers and tools.
 6.  **MSYS2:** Provides the MinGW-w64 toolchain (`make`, `gcc`), which is needed to compile some native Neovim plugins.
 7.  **CMake:** A build system used by some native plugins (e.g., `telescope-fzf-native`).
-
-## Manual Setup Instructions
-
-To activate these configurations, you need to place the files from this repository into their default locations on Windows.
-
-#### Neovim
-
-Copy the entire contents of the `nvim/` folder from this repository to the following path:
-`%LOCALAPPDATA%\nvim`
-
-#### VS Code
-
-Copy the `settings.json` file from the `vscode/` folder in this repository to the following path, overwriting the existing one:
-`%APPDATA%\Code\User\settings.json`
-
-## Post-Setup
-
-### Neovim
-
-The first time you launch Neovim after copying the files, it will automatically install all plugins via `lazy.nvim`. If you need to sync or update them later, use the `:Lazy sync` command inside Neovim.
